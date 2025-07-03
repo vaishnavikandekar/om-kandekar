@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Farmer Interface</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; }
+    .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h3 { text-align: center; margin-bottom: 20px; }
+    .product-list { list-style: none; padding: 0; }
+    .product-list li {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 10px;
+      padding: 10px; background: #eef; border-radius: 5px;
+    }
+    .btn-primary:hover { background-color: #0069d9; border-color: #0062cc; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Farmer Interface</h1>
+    <div class="product-section">
+      <h3>Add Product</h3>
+      <form id="addProductForm">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" id="productName" class="form-control" placeholder="e.g., Olive Oil">
+        </div>
+        <div class="form-group">
+          <label>Price:</label>
+          <input type="number" id="productPrice" class="form-control" placeholder="e.g., 150">
+        </div>
+        <div class="form-group">
+          <label>Quantity:</label>
+          <input type="number" id="productQuantity" class="form-control" placeholder="e.g., 30">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+      </form>
+    </div>
+    <div class="product-section">
+      <h3>Product List</h3>
+      <ul id="productList" class="product-list"></ul>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      const products = [];
+      $('#addProductForm').submit(e => {
+        e.preventDefault();
+        const name = $('#productName').val(),
+              price = $('#productPrice').val(),
+              qty = $('#productQuantity').val();
+        products.push({ name, price, qty, forSale: false });
+        $('#addProductForm')[0].reset();
+        updateList();
+      });
+      $(document).on('click', '.sell-button', function() {
+        const idx = $(this).data('idx');
+        products[idx].forSale = !products[idx].forSale;
+        updateList();
+      });
+      function updateList() {
+        const ul = $('#productList').empty();
+        products.forEach((p, i) => {
+          const li = $('<li>');
+          li.append(`<span>${p.name} — ₹${p.price} × ${p.qty} ${p.forSale ? '✅ For Sale' : ''}</span>`);
+          li.append(`<button class="btn btn-primary sell-button" data-idx="${i}">${p.forSale ? 'Remove Sale' : 'Put for Sale'}</button>`);
+          ul.append(li);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
