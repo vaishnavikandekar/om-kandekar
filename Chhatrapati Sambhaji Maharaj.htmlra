@@ -1,0 +1,91 @@
+E html>html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्रपती संभाजी महाराज जयंती</title>
+    <style>
+        body {
+            font-family: sans-serif;<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Friendship Day!</title>
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+  }
+  .message {
+    font-size: 2em;
+    color: #4682b4; /* Steel blue */
+    margin-bottom: 20px;
+  }
+  .friend-name {
+    font-weight: bold;
+    color: #800080; /* Purple */
+  }
+  .band-image {
+    width: 150px;
+    margin-top: 20px;
+  }
+</style>       
+</head>
+<body>
+  <div class="message">Happy Friendship Day!</div>
+  <div class="message">To my dear friend, <span class="friend-name">Friend's Name Here</span>!</div>
+  <img class="band-image" src="friendship_band.png" alt="Friendship Band">
+  <p>Wishing you all the best on this special day!</p>
+</body>
+</html>
+
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: maroon;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>छत्रपती संभाजी महाराज जयंती</h1>
+        <div class="image-container">
+            <img src="sambhaji_maharaj.jpg" alt="छत्रपती संभाजी महाराज">
+        </div>
+        <p>छत्रपती संभाजी महाराज, मराठा साम्राज्याचे शूर आणि पराक्रमी राजे, यांचा जन्मदिवस. ते छत्रपती शिवाजी महाराजांचे ज्येष्ठ पुत्र होते. 
+            आज, त्यांच्या जयंतीनिमित्त आपण त्यांना आदराने स्मरण करतो. 
+            त्यांच्या शौर्याला, धैर्याला आणि त्यागाला मानाचा मुजरा!</p>
+    </div>
+</body>
+</html>
+
+<html>
+<head>
+<title>महाराष्ट्र दिवस</title>
+</head>
+<body>
+
+<h1>महाराष्ट्र दिवस</h1>
+
+</body>
+</html>
